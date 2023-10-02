@@ -1,4 +1,4 @@
-// Custom Properties
+
 
 :root {
 
@@ -9,7 +9,7 @@
     --clr-neutral-300: hsl(264, 10%, 90%);
     --clr-neutral-400: hsl(0, 0%, 31%);
     
-    --clr-accent-400: hsl(170, 100%, 40%);
+    --clr-accent-400: hsl(170, 90%, 31%);
     --clr-accent-500: hsl(181, 60%, 16%);
 
     --ff-primary: 'Roboto', sans-serif;
@@ -18,13 +18,13 @@
     --fw-400: 400;
     --fw-700: 700;
 
-    --fs-900: 3rem; //lg price
-    --fs-800: 2.5rem; // heading
-    --fs-700: 1.5625rem; // sm price
-    --fs-600: 1.3125rem; // subhead
-    --fs-500: 1.125rem; //card title
-    --fs-400: 1rem; //description
-    --fs-400: 14px; // button
+    --fs-900: 3rem; 
+    --fs-800: 2.5rem;
+    --fs-700: 1.5625rem; 
+    --fs-600: 1.3125rem; 
+    --fs-500: 1.125rem; 
+    --fs-400: 1rem; 
+    --fs-300: 14px; 
 }
 
 
@@ -42,14 +42,23 @@ body {
     margin-bottom: 0;
   }
   
-  .text-accent {
-    color: #00a1ab;
+  .text--accent {
+    color: var(--clr-accent-400);
   }
   
-  .fs-500 {
-    font-size: 1.3125rem;
+  .fs-600 {
+    font-size: var(--fs-600);
     margin-top: 0;
   }
+
+  .fw-300 {
+    font-weight: var(--fw-300);
+  }
+
+  .padding-top {
+    padding-top: 1.5rem;
+  }
+
   
   .plans {
     display: flex;
@@ -79,9 +88,9 @@ body {
   }
   
   .plan__price {
-    font-size: 3rem;
+    font-size: var(--fs-900);
     line-height: 1;
-    font-weight: 900;
+    font-weight: var(--fw-700);
     margin: 0;
   }
   
@@ -97,9 +106,10 @@ body {
   }
   
   .button {
+    font-size: var(--fs-300);
     text-decoration: none;
     padding: 0.5em 0.75em;
-    border-radius: 0.25em;
+    border-radius: .5em;
     text-transform: uppercase;
     font-weight: 700;
   }
@@ -108,8 +118,34 @@ body {
     background: white;
     color: #4e4e4e;
   }
+
+  .button--light:hover,
+  .button--light:focus {
+    background: var(--clr-neutral-400);
+    color: var(--clr-neutral-100);
+    transition: all 300ms ease-in-out;
+  }
   
   .button--dark {
-    color: white;
-    background: #4e4e4e;
+    color: var(--clr-neutral-100);
+    background: var(--clr-neutral-400);
+  }
+
+  .button--dark:hover,
+  .button--dark:focus {
+    background: var(--clr-neutral-100);
+    color: var(--clr-neutral-400);
+    transition: all 300ms ease-in-out;
+  }
+
+  .button--accent {
+    color: var(--clr-neutral-100);
+    background: var(--clr-accent-400);
+  }
+
+  .button--accent:hover,
+  .button--accent:focus {
+    color: var(--clr-accent-400);
+    background-color: var(--clr-neutral-300);
+    transition: all 300ms ease-in-out;
   }
